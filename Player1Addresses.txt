@@ -1,0 +1,43 @@
+Player 1 Addresses: 
+Player1_Weapon_1_Ammo = 0x01C08F00; -> INTEGER
+Player1_Weapon_2_Ammo = 0x01C08F10; -> INTEGER
+Player1_Weapon_3_Ammo = 0x01C08F18; -> INTEGER
+Player1_Weapon_4_Ammo = 0x01C08F08; -> INTEGER
+Player1_Weapon_5_Ammo = 0x01C08F20; -> INTEGER
+
+Player1_Noclip = 0x1C0A74C; -> 1 is enabled, 0 is disabled
+
+Player1_Name_Scoreboard = 0x01C0A678; -> STRING
+Player1_Kills = 0x01C0A6CC; -> INTEGER
+Player1_Zombie_Points = 0x01C0A6C8; -> INTEGER
+
+MISC Addresses:
+
+norecoil = 0x006562F0; (0x75)
+
+for these, you need to NOP them, and all three of them, or else it will crash the game:
+AmmoDecrementAddy1 = 0x697A10;
+AmmoDecrementAddy2 = 0x697A11;
+AmmoDecrementAddy3 = 0x697A12;
+
+Player Position Coordinate Addresses:
+PlayerPosX = 0x01C08B64; -> FLOAT
+PlayerPosY = 0x01C08B6C; -> FLOAT
+PlayerPosZ = 0x01C08B68; -> FLOAT
+
+For these, NOP all of them (0x90), they are from the function that decrements your health. NOP THEM ALL or it will crash.
+Health1 = 0x7DADD0;
+Health2 = 0x7DADD1;
+Health3 = 0x7DADD2;
+Health4 = 0x7DADD3;
+Health5 = 0x7DADD4;
+Health6 = 0x7DADD5;
+
+
+
+
+
+
+
+
+
